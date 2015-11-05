@@ -3,15 +3,19 @@ exports = (typeof window === 'undefined') ? global : window;
 exports.arraysAnswers = {
 
   indexOf : function(arr, item) {
-
+    return arr.indexOf(item);
   },
 
   sum : function(arr) {
-
+    var sum = 0;
+    for(var i=0; i<arr.length; i++){
+        sum = sum + arr[i];
+    };
+    return sum;
   },
 
   remove : function(arr, item) {
-
+    arr = arr.splice(arr.indexOf(item), 1);
   },
 
   removeWithoutCopy : function(arr, item) {
